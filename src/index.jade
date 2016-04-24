@@ -1,0 +1,22 @@
+extends ./_layouts-includes/_layout.jade
+
+block content
+
+  - var screenshots = [ "1280-Four-Stories-on-Creativity-from-John-Cleese.jpg", "18512.jpg", "3538413244_6e3759a645.jpg" ]
+
+  button.switch-to-fan
+    | switch view
+
+  .viewport.yellow.show-as-stack
+
+
+    - each screenshot, index in screenshots
+      .test(class="nr#{index}")
+        image.master(src="assets/bucket/screenshots/master/#{screenshot}")
+        image.current-branch(src="assets/bucket/screenshots/current-branch/#{screenshot}")
+        image.placeholder(src="assets/bucket/screenshots/master/#{screenshot}")
+
+
+
+  //- holds inline ui-lang and jquery
+  include ./_layouts-includes/_interaction.jade

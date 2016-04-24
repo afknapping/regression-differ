@@ -1,0 +1,84 @@
+@import "node_modules/ui-sketchbook/sasslib/sasslib";
+@include ui-sketchbook-defaults;
+// @import "./node_modules/semantic-ui-css/semantic.css"; // Semantic UI semantic-ui.com
+
+
+.viewport {
+  // height: 100vh;
+  // width: 100vw;
+  position: relative;
+}
+
+.yellow {
+  // background-color: black;
+}
+
+@mixin width {
+  max-height: 40vh;
+  max-width: 80vw;
+
+}
+
+.test {
+  position: absolute;
+
+  // overflow: hidden;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  @include width;
+  margin: 0.5em;
+}
+
+
+.switch-to-fan {
+  font-size: 32px;
+  margin: 0.5em;
+}
+
+
+.current-branch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  @include width;
+}
+
+.master {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include width;
+}
+
+.placeholder {
+  visibility: hidden;
+  @include width;
+}
+
+.test.nr0{
+  outline: 1px solid white;
+}
+
+
+
+.show-as-fan {
+  .test {
+    position: relative;
+    // border: 1px solid white;
+    // overflow: hidden;
+    // height: 90vh;
+    outline: 1px solid white;
+}
+
+}
+
+
+body {
+  // padding-top: 5em;
+  color: $black;
+  background-color: black;
+  text-align-last: 1; // this only exists to get an autoprefixer positive
+}
+
